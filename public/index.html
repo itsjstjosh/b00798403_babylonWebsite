@@ -31,10 +31,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="./info.html">Documentation</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -169,40 +169,51 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              what is html
+              element 5 documentation
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>html stands for hypertext markup language</strong> it is annoying and tedious.
+              
+
+                <p>for element 5 i set up 2 different scenes, with different sizes, shapes, textures and lighting. with GUI buttons to allow the user to switch between scenes at will.</p>
+                
+                <p>to change the sizes of the shapes all i had to do was use a function to create the mesh and then "let" the mesh have my preffered "height" and "diameter", so by changing those varibles i had near full control of the size of the mesh's</p>
+                
+                <p>i sourced the textures from the lecturer of the course, using a github repository that he made public i was able to source the textures i needed. i applied these textures to the main (biggest) object in the first scene, as well as the 2 smaller shapes (cyllinder and cube) in the second.</p>
+                
+
+                
+               <p>for the lights i set up a hemispheric light in each scene, i wanted to make them different so in the first scene i made it have a red/pink lighting with green reflections, with a lower intensity and for the second scene i chose to use a noticeably more intense light and made it green.</p> 
+                
+                    <p>for this i created a function in the createstartscene for both scenes named "createhemisphericlight", in this function i created a new light for the scene and tweaked the lighting values, to do this i changed the light.diffuse, light.specular and light.groundColor, to make the first scene a pinkish colour i set </p>
+                        <p>light.diffuse = (1, 0, 0);</p>
+                        <p>light.specular = (0, 1, 0);</p>
+                        <p>light.groundColor =(0, 1, 0);</p>
+                
+                    <p>and for the second scene to make it green i set </p>
+                        <p>light.diffuse = new Color3(0, 1, 0);</p>
+                        <p>light.specular = new Color3(0, 1, 0);</p>
+                        <p>light.groundColor = new Color3(0, 0, 1);</p>
+                
+                    <p>this gave me the lighting i wanted for these scenes and helped very clearly differentiate them</p>
+                
+                
+                <p>once i had the scenes set up all i had to do was add a GUI so the player could switch between them, to do this i created a seperate file just for GUI (the arcrotatecamera is also created with this file)</p>
+                
+                <p>i created a multiple functions in this file</p>
+                        <p>one of them was to export (menuscene) which allows the function to be used from different files</p>
+                
+                        <p>another being (createscenebutton) which allowed for the scenes to call a premade button design to the scene and then be edited to do whatever its purpose is.</p>
+                
+                    <p>both of the scenes call those functions to allow the player to move between the multi scene easily.</p>
+                    
+                
+              </p>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accordion Item #2
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
 
 
 

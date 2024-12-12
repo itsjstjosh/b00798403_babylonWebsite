@@ -2,22 +2,91 @@
 <html>
 
 <head>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>info page</title>
 
 </head>
 
 <body>
-    
-
-    <img src="youDied.png" alt="you died bozo" width="100%" height="100%">
-    
-    <div class = "w3-container w3-red" >
-        <h1>This is an info heading element... wooooo</h1>
+    <div class="container-fluid py-5 text-center bg-dark text-light" >
+        <h1 class="display-5 fw-bold"> Element 5 Documentation</h1>
+        
     </div>
+    
+<br>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./info.html">Documentation</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Game Scenes
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./element1/">Element 1</a></li>
+                  <li><a class="dropdown-item" href="./element2/">Element 2</a></li>
+                  <li><a class="dropdown-item" href="./element3/">Element 3</a></li>
+                  <li><a class="dropdown-item" href="./element4/">Element 4</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./element5/">Element 5</a></li>
+                </ul>
+              </li>              
+            </ul>              
+            </form>
+          </div>
+        </div>
+      </nav>
 
-     <p>This is a paragraph of info element.... yipeeeeeeeeeee</p>
-     <p>you died and now youre on a tacky website</p>
+
+    
+    
+      <div class=" text-light bg-dark bg-opacity-50"><h3 style ="text-align: center"></h3>
+        <p>for element 5 i set up 2 different scenes, with different sizes, shapes, textures and lighting. with GUI buttons to allow the user to switch between scenes at will.</p>
+                
+                <p>to change the sizes of the shapes all i had to do was use a function to create the mesh and then "let" the mesh have my preffered "height" and "diameter", so by changing those varibles i had near full control of the size of the mesh's</p>
+                
+                <p>i sourced the textures from the lecturer of the course, using a github repository that he made public i was able to source the textures i needed. i applied these textures to the main (biggest) object in the first scene, as well as the 2 smaller shapes (cyllinder and cube) in the second.</p>
+                
+
+                
+               <p>for the lights i set up a hemispheric light in each scene, i wanted to make them different so in the first scene i made it have a red/pink lighting with green reflections, with a lower intensity and for the second scene i chose to use a noticeably more intense light and made it green.</p> 
+                
+                    <p>for this i created a function in the createstartscene for both scenes named "createhemisphericlight", in this function i created a new light for the scene and tweaked the lighting values, to do this i changed the light.diffuse, light.specular and light.groundColor, to make the first scene a pinkish colour i set </p>
+                        <p>light.diffuse = (1, 0, 0);</p>
+                        <p>light.specular = (0, 1, 0);</p>
+                        <p>light.groundColor =(0, 1, 0);</p>
+                
+                    <p>and for the second scene to make it green i set </p>
+                        <p>light.diffuse = new Color3(0, 1, 0);</p>
+                        <p>light.specular = new Color3(0, 1, 0);</p>
+                        <p>light.groundColor = new Color3(0, 0, 1);</p>
+                
+                    <p>this gave me the lighting i wanted for these scenes and helped very clearly differentiate them</p>
+                
+                
+                <p>once i had the scenes set up all i had to do was add a GUI so the player could switch between them, to do this i created a seperate file just for GUI (the arcrotatecamera is also created with this file)</p>
+                
+                <p>i created a multiple functions in this file</p>
+                        <p>one of them was to export (menuscene) which allows the function to be used from different files</p>
+                
+                        <p>another being (createscenebutton) which allowed for the scenes to call a premade button design to the scene and then be edited to do whatever its purpose is.</p>
+                
+                    <p>both of the scenes call those functions to allow the player to move between the multi scene easily.</p>
+        </div>
+        
 
      <a href = "index.html">go back to the homepage</a>
 </body>
